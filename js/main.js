@@ -86,3 +86,14 @@
     formSuccess.classList.remove('show');
     supportForm.style.display = '';
   }
+
+  
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('load', () => {
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+});
